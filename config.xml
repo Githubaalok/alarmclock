@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.demo2434652" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Dreamgraphs</name>
+<widget id="com.ionicframework.alarmclock2468215" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>AlarmClock</name>
   <description>&#xD;
-        Dreamgraphs Sample Application.&#xD;
+        AlarmClock Sample Application.&#xD;
     </description>
   <author email="you@example.com" href="http://example.com/">&#xD;
       Makerites Software Solutions&#xD;
