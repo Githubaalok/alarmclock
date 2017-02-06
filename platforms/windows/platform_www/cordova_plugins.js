@@ -352,30 +352,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "pluginId": "cordova-plugin-media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/src/windows/MediaProxy.js",
-        "id": "cordova-plugin-media.MediaProxy",
-        "pluginId": "cordova-plugin-media",
-        "merges": [
-            ""
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "pluginId": "cordova-plugin-media-capture",
@@ -475,6 +451,30 @@ module.exports = [
         "id": "cordova-plugin-network-information.NetworkInfoProxy",
         "pluginId": "cordova-plugin-network-information",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-media/src/windows/MediaProxy.js",
+        "id": "cordova-plugin-media.MediaProxy",
+        "pluginId": "cordova-plugin-media",
+        "merges": [
+            ""
+        ]
     }
 ];
 module.exports.metadata = 
@@ -494,9 +494,10 @@ module.exports.metadata =
     "cordova-plugin-dialogs": "1.3.1",
     "cordova-plugin-inappbrowser": "1.5.0",
     "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-media": "2.4.1",
     "cordova-plugin-media-capture": "1.4.1",
-    "cordova-plugin-network-information": "1.3.1"
+    "cordova-plugin-network-information": "1.3.1",
+    "cordova-plugin-media": "2.4.1",
+    "cordova-plugin-nativeaudio": "3.0.8"
 };
 // BOTTOM OF METADATA
 });

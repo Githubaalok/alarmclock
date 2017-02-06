@@ -1,0 +1,21 @@
+<ion-view view-title="Alarm List" hide-nav-bar="true" ng-controller="alarmCtrl">
+	<ion-content>
+    	<ul class="list">
+          <li class="item" ng-repeat="alarm in alarms track by $index">
+            {{alarm.time}}
+            <span class="item-toggle">
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model="alarm.on" ng-click="offalarm($index)">
+                    <div class="track">
+                       <div class="handle"></div>
+                    </div>
+                </label>
+            </span>
+            <a ng-click="removealarm($index)">
+             <i class="icon ion-close"></i>
+            </a>
+          </li>
+        </ul>
+		<button class="button button-positive" ng-click="newalarm();">Create New</button>
+    </ion-content>
+</ion-view>

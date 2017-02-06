@@ -229,7 +229,15 @@ angular.module('starter.controllers', [])
 	};
 })
 /** Member Profile Controller **/
-.controller('alarmCtrl',function($scope,$http,$ionicLoading,$ionicHistory,$state,$ionicPopup,$ionicModal,$filter,$interval) {
+.controller('alarmCtrl',function($scope,$http,$ionicLoading,$ionicHistory,$state,$ionicPopup,$ionicModal,$filter,$interval,$cordovaNativeAudio) {
+	 $cordovaNativeAudio
+    .preloadSimple('click', 'audio.mp3')
+    .then(function (msg) {
+      console.log(msg);
+    }, function (error) {
+      alert(error);
+    });
+
 	$scope.alarms = [];
 	$scope.alarm = {};
     $ionicModal.fromTemplateUrl('add-alarm.html',function(modal){
@@ -274,11 +282,11 @@ angular.module('starter.controllers', [])
   };
  $interval(function() {
        $scope.alarmcheck(); //Check any alarm now once a minute
-   }, 5000);
+   }, 60000);
 
    $interval(function() {
       $scope.Time = $filter('date')(new Date(), 'hh:mm a'); //Check current time one minute once
-   }, 5000);
+   }, 60000);
 $scope.alarmcheck = function (){
 	
        var input = $scope.alarms, time = $scope.Time; //Take object of arrays and time in local variable 
@@ -289,6 +297,13 @@ $scope.alarmcheck = function (){
               title: 'Alarm',
               template: 'Wake up'             // If it is there open popup to display
             });
+			$cordovaNativeAudio.play('click');
+
+			// stop 'music' loop and unload
+			$timeout(function () {
+
+			  $cordovaNativeAudio.unload('click');
+			}, 1000 * 60);
          }
      }
    };

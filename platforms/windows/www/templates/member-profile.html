@@ -1,59 +1,102 @@
-<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
-	<div class="bar bar-subheader bar-secondary">
-      <h2 class="title secondary">Member Profile</h2>
-    </div>
-	<div class="bar bar-subheader bar-secondary">
-      <h2 class="title secondary">{{ memberdata.fname }} {{ memberdata.lname }}</h2>
-    </div>
+<ion-view view-title="Profile">
 	<ion-content>
-    	<div class="banner pagesubheader">
-          <div class="banner_img">
-            <img ng-if="memberdata.image_url" src="{{ memberdata.image_url }}" alt="avatar" style="height:200px;width:100%;">
-			<img ng-if="memberdata.image_url == null" src="img/siteimgs/boy-512.png" alt="avatar" style="height:200px;width:100%;">
-          </div>
-          <div class="banner_text">
-            
-          </div>
-        </div>
-		<div class="list">
-		  <div class="item item-divider">
-			General Information
-		  </div>
-		  <a class="item " ng-if="memberdata.fname">
-			<span class="datatitle">Firstname</span> <b class="datavalue">{{ memberdata.fname }}</b>
-		  </a>
-		  <a class="item" ng-if="memberdata.lname">
-			<span class="datatitle">Lastname</span> <b class="datavalue">{{ memberdata.lname }}</b>
-		  </a>
-		  <a class="item" ng-if="memberdata.dob">
-			<span class="datatitle">Date Of Birth</span> <b class="datavalue">{{ memberdata.dob }}</b>
-		  </a>
-		  <a class="item" ng-if="memberdata.Professional">
-			<span class="datatitle">Professional</span> <b class="datavalue">{{ memberdata.Professional }}</b>
-		  </a>
-		  <a class="item" ng-if="memberdata.mother_tongue">
-			<span class="datatitle">Mother Tongue</span> <b class="datavalue">{{ memberdata.mother_tongue }}</b>
-		  </a>
-		  <div class="item item-divider">
-			Contact Info
-		  </div>
-		  <a class="item" ng-if="memberdata.Country">
-			<span class="datatitle">Country</span> <b class="datavalue">{{ memberdata.Country }}</b>
-		  </a>
-		  <a class="item" ng-if="memberdata.email">
-			<span class="datatitle">E-Mail</span> <b class="datavalue">{{ memberdata.email }}</b>
-		  </a>
-		  <div class="item item-divider">
-			About Yourself
-		  </div>
-		  <a class="item" style="white-space: initial;" ng-if="memberdata.description">
-			{{ memberdata.description }}
-		  </a>
+    	<div class="row text-center profile">
+			<div class="col col-10">
+				<a href="#"><i class="ion-camera"></i></a>
+			</div>
+			<div class="col col-80">
+				<h3>John cina</h3>
+			</div>
+			<div class="col col-10">
+				<a href="#"><i class="ion-gear-b"></i></a>
+			</div>
 		</div>
-        <div class="row">
-            <div class="col col-100 text-center" style="margin-bottom:60px;">
-            	
-            </div>
-        </div>
+		<div class="row pro-img text-center">
+			<div class="col col-30">
+				<div class="col col-30">
+					<div class="row">
+						<div class="col col-50 bg-orange">
+							<img style="width:100%" src="img/siteimgs/dreamgraphs2_logo.png">
+						</div>
+						<div class="col col-50 bg-orange text-center">	
+							<p>retos</p>
+							<p>1</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-50 bg-blue">
+							<img style="width:100%" src="img/siteimgs/dreamgraphs3_logo.png">
+						</div>
+						<div class="col col-50 bg-blue text-center">	
+							<p>Puntos</p>
+							<p>1</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-50 bg-green">
+							<img style="width:100%" src="img/siteimgs/dreamgraphs4_logo.png">
+						</div>
+						<div class="col col-50 bg-green text-center">	
+							<p>Compentation</p>
+							<p>1</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-40 pic">
+				<div class="profile_imgwithicon">
+					<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+					<a class="icon-profile-camera" href="#"><i class="ion-camera"></i></a>
+				</div>
+				<p class="text-white"><i class="ion-ios-location"></i> NEW YORK USA</p>
+			</div>
+			<div class="col col-30">
+			</div>			
+		</div>
+		<div class="button-bar custom-button-group">
+		  <a href="#/app/followers" class="button button-custom">83 Followers</a>
+		  <a href="#/app/my-activity" class="button button-custom" >My Activity</a>
+		  <a href="#/app/following" class="button button-custom">100 Following</a>
+		</div>
+		<div class="row custom-profile-img">
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>			
+		</div>
+		<div class="row custom-profile-img">
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>			
+		</div>
+		<div class="row custom-profile-img">
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>
+			<div class="col col-25">
+				<img src="https://1in6.org/wp-content/uploads/2016/07/Thumb_JulioRodriguez.jpg">
+			</div>			
+		</div>
+		<div class="row">
+			<div class="col col-100" style="margin-bottom:30px;"></div>
+		</div>
     </ion-content>
+	<div ng-include src="'templates/bottom-tabs.html'"></div>
 </ion-view>

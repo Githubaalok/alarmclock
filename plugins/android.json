@@ -46,14 +46,17 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.ionicframework.demo186432"
         },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "com.ionicframework.demo186432"
-        },
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.ionicframework.demo186432"
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.demo186432"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ionicframework.alarmclock2468215"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "com.ionicframework.alarmclock2468215"
         }
     },
     "dependent_plugins": {

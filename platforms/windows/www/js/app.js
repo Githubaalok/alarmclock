@@ -1,13 +1,10 @@
 // Ionic Starter App
-var globalip = "http://makerits.com/jainoswalsajnanfedration/webservice/";
-var globalip_2 = "http://makerits.com/jainoswalsajnanfedration/matrimonial/matrimonial_web";
-
-
+var globalip = "https://www.dreamgraphs.com/web_service.php";
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
 
 .run(function($ionicPlatform,$state,$ionicPopup,$ionicHistory) {
   $ionicPlatform.ready(function() {
@@ -22,13 +19,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-	
 
   });
+
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-  
   $ionicConfigProvider.views.transition('none');
   $ionicConfigProvider.tabs.position('bottom'); 
   $stateProvider
@@ -39,270 +35,88 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-  .state('app.dashboard', {
-    url: '/dashboard',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/dashboard.html',
-		controller: 'dashboardCtrl'
-      }
-    }
-  })
-  .state('app.sanvidhaan', {
-    url: '/sanvidhaan',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/sanvidhaan.html',
-		/*controller: 'dashboardCtrl'*/
-      }
-    }
-  })
-  .state('app.padadhikari', {
-    url: '/padadhikari',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/padadhikari.html',
-		/*controller: 'dashboardCtrl'*/
-      }
-    }
-  })
-  .state('app.karyakarini', {
-    url: '/karyakarini',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/karyakarini.html',
-		/*controller: 'dashboardCtrl'*/
-      }
-    }
-  })
-  .state('app.uddeshya', {
-    url: '/uddeshya',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/uddeshya.html',
-		/*controller: 'dashboardCtrl'*/
-      }
-    }
-  })
   .state('app.login', {
-    url: '/login',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/login.html'
-      }
-    }
+	url: '/login',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/login.html',
+		controller: 'loginCtrl'
+	  }
+	}
   })
   .state('app.register', {
-    url: '/register',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/register.html'
-      }
-    }
+	url: '/register',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/register.html',
+		//controller: 'registrationCtrl'
+	  }
+	}
   })
   .state('app.forgot-password', {
-    url: '/forgot-password',
+	url: '/forgot-password',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/forgot-password.html'
+	  }
+	}
+  })
+  .state('app.alarm-list', {
+	url: '/alarm-list',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/alarm-list.html',
+		controller: 'alarmCtrl'
+	  }
+	}
+  })
+  .state('app.home', {
+    url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/forgot-password.html'
+        templateUrl: 'templates/home.html',
+	    //controller: 'homeCtrl' 
       }
     }
   })
-  .state('app.contact', {
-    url: '/contact',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/contact.html',
-      }
-    }
+  .state('app.user-list', {
+		url: '/user-list',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/user-list.html',
+				//controller: 'usersListCtrl'
+			}
+		}
+	})
+   .state('app.member-profile', {
+	url: '/member-profile',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/member-profile.html',
+		//controller: 'memberProfileCtrl'
+	  }
+	}
+   })
+   .state('app.change-password', {
+	url: '/change-password',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/change-password.html',
+		//controller: 'changePassCtrl'
+	  }
+	}
   })
-  .state('app.matrimonial_contact', {
-    url: '/matrimonial_contact',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/matrimonial_contact.html',
-      }
-    }
+  .state('app.blood-request', {
+	url: '/blood-request',
+	views: {
+	  'menuContent': {
+		templateUrl: 'templates/blood-request.html',
+		//controller: 'changePassCtrl'
+	  }
+	}
   })
-  .state('app.jankari', {
-    url: '/jankari',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/jankari.html',
-		controller: 'jankariCtrl'
-      }
-    }
-  })
-  .state('app.sandesh', {
-    url: '/sandesh/:slug',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/sandesh.html',
-		controller: 'sandeshCtrl'
-      }
-    }
-  })
-  .state('app.parichaypatra', {
-    url: '/parichaypatra',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/parichaypatra.html',
-		controller: 'parichaypatraCtrl'
-      }
-    }
-  })
-  .state('app.business_directory', {
-    url: '/business_directory',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/business_directory.html',
-		/*controller: 'business_directoryCtrl'*/
-      }
-    }
-  })
-  .state('app.jain-thirth-yatra', {
-		url: '/jain-thirth-yatra',
-		views: {
-			'menuContent': {
-				templateUrl: 'jain-thirth-yatra.html',
-				controller: 'ekal_khidkiCtrl'
-			}
-		}
-	})
-	.state('app.mahathirth-dharmshala', {
-		url: '/mahathirth-dharmshala',
-		views: {
-			'menuContent': {
-				templateUrl: 'mahathirth-dharmshala.html',
-				controller: 'ekal_khidkiCtrl'
-			}
-		}
-	})
-	.state('app.shiksha', {
-		url: '/shiksha',
-		views: {
-			'menuContent': {
-				templateUrl: 'shiksha.html',
-				controller: 'ekal_khidkiCtrl'
-			}
-		}
-	})
-	.state('app.swasthya', {
-		url: '/swasthya',
-		views: {
-			'menuContent': {
-				templateUrl: 'swasthya.html',
-				controller: 'ekal_khidkiCtrl'
-			}
-		}
-	})
-	.state('app.myprofile', {
-		url: '/myprofile',
-		views: {
-			'menuContent': {
-				templateUrl: 'myprofile.html',
-				/*controller: 'ekal_khidkiCtrl'*/
-			}
-		}
-	})
-	.state('app.account', {
-		url: '/account',
-		views: {
-			'menuContent': {
-				templateUrl: 'account.html',
-				/*controller: 'ekal_khidkiCtrl'*/
-			}
-		}
-	})
-	.state('app.change-password', {
-		url: '/change-password',
-		views: {
-			'menuContent': {
-				templateUrl: 'change-password.html',
-				/*controller: 'ekal_khidkiCtrl'*/
-			}
-		}
-	})
-	.state('app.privacy', {
-		url: '/privacy',
-		views: {
-			'menuContent': {
-				templateUrl: 'privacy.html',
-				/*controller: 'ekal_khidkiCtrl'*/
-			}
-		}
-	})
-	.state('app.matrimonial', {
-		url: '/matrimonial',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/matrimonial.html',
-				controller: 'matrimonialCtrl'
-			}
-		}
-	})
-	.state('app.member-login', {
-		url: '/member-login',
-		views: {
-		  'menuContent': {
-			templateUrl: 'templates/member-login.html'
-		  }
-		}
-	})
-	.state('app.member-registration', {
-		url: '/member-registration',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/member-registration.html',
-				/*controller: 'profileCtrl'*/
-			}
-		}
-	})
-	.state('app.forgot-password-member', {
-		url: '/forgot-password-member',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/forgot-password-member.html',
-			}
-		}
-	})
-	.state('app.introductionform', {
-		url: '/introductionform',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/introductionform.html'
-			}
-		}
-	})
-	.state('app.member-list', {
-		url: '/member-list',
-		views: {
-			'menuContent': {
-				templateUrl: 'templates/member-list.html',
-				controller: 'memberlistCtrl'
-			}
-		}
-	})
-	.state('app.member-profile', {
-		url: '/member-profile/:user_id',
-		views: {
-		  'menuContent': {
-			templateUrl: 'templates/member-profile.html',
-			controller: 'memberprofileCtrl'
-		  }
-		}
-	})
-	.state('app.profile-edit', {
-		url: '/profile-edit',
-		views: {
-		  'menuContent': {
-			templateUrl: 'templates/profile-edit.html',
-			/*controller: 'profileCtrl'*/
-		  }
-		}
-	})
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/dashboard');
+  $urlRouterProvider.otherwise('/app/alarm-list');
 })
 
 .directive('map', function() {
@@ -347,6 +161,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		  }
 		}
   	}
+})
+//Dynamic SRC 
+.directive('dynamicUrl', function () {
+    return {
+        restrict: 'A',
+        link: function postLink(scope, element, attr) {
+            element.attr('src', attr.dynamicUrlSrc);
+        }
+    };
 });
 
 

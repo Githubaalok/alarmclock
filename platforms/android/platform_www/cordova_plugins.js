@@ -259,20 +259,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-media/www/MediaError.js",
-        "id": "cordova-plugin-media.MediaError",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-media/www/Media.js",
-        "id": "cordova-plugin-media.Media",
-        "clobbers": [
-            "window.Media"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
         "id": "cordova-plugin-media-capture.CaptureAudioOptions",
         "clobbers": [
@@ -345,6 +331,30 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "id": "cordova-plugin-media.MediaError",
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "id": "cordova-plugin-media.Media",
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "id": "cordova-plugin-nativeaudio.nativeaudio",
+        "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
+        "pluginId": "cordova-plugin-nativeaudio",
+        "clobbers": [
+            "window.plugins.NativeAudio"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -364,9 +374,10 @@ module.exports.metadata =
     "cordova-plugin-dialogs": "1.3.1",
     "cordova-plugin-inappbrowser": "1.5.0",
     "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-media": "2.4.1",
     "cordova-plugin-media-capture": "1.4.1",
-    "cordova-plugin-network-information": "1.3.1"
+    "cordova-plugin-network-information": "1.3.1",
+    "cordova-plugin-media": "2.4.1",
+    "cordova-plugin-nativeaudio": "3.0.8"
 };
 // BOTTOM OF METADATA
 });

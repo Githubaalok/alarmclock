@@ -1,33 +1,43 @@
-<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
-	<div class="bar bar-subheader bar-secondary">
-      <h2 class="title secondary">लॉगिन</h2>
-    </div>
+<ion-view view-title="Login" hide-nav-bar="true">
 	<ion-content>
-    	<div class="row pagesubheader">
+    	<div class="row">
           <div class="col col-100 text-center">
-          	<img src="http://makerits.com/jainoswalsajnanfedration/wp-content/uploads/2016/11/Oswal-Jain-sajnan-jos-logjo-2.png" alt="logo" style="height:100px;width:100px;margin-top:10px;">
+          	<img src="img/siteimgs/logo.png" alt="logo" style="height:120px;width:120px;">
           </div>
        	</div>
         <div class="row">
           <div class="col col-100">
-            <form ng-submit="submitloginForm();" ng-controller="loginCtrl" name="loginForm" novalidate>
-             <label class="item item-input item-input-custom">
-                <input type="text" placeholder="ईमेल (*)" ng-model="email" name="email">
-              </label>
-              <label class="item item-input item-input-custom">
-                <input type="password" placeholder="पासवर्ड (*)" ng-model="password" name="password">
-              </label>
-              <button class="button button-balanced button-block">
-              	लॉगिन
-              </button>
+            <form name="memberloginForm1" ng-submit="submitLoginForm1(memberloginForm);" novalidate>
+             <div class="list list-custom">
+			    <!-- Input -->
+				  <label class="item item-input item-custom">
+					<input type="email" placeholder="Email" ng-model="email" name="email" ng-maxlength="30" required>
+				  </label>
+				  <p class="error-p" ng-show="memberloginForm.email.$error.required && (!memberloginForm.email.$pristine || memberloginForm.$submitted)">This Field Is Required</p>
+				  <p class="error-p" ng-show="memberloginForm.email.$error.maxlength && (!memberloginForm.email.$pristine || memberloginForm.$submitted)">Cannot Longer Than 30 Characters</p>
+				  <p class="error-p" ng-show="memberloginForm.email.$invalid && (!memberloginForm.email.$pristine || memberloginForm.$submitted) && !memberloginForm.email.$error.required">Email Is Not Valid</p>
+				<!--/ Input -->
+			    <!-- Input -->
+				  <label class="item item-input item-custom">
+					<input type="password" placeholder="Password" ng-model="password" name="password" required>
+				  </label>
+				  <p class="error-p" ng-show="memberloginForm.password.$error.required && (!memberloginForm.password.$pristine || memberloginForm.$submitted)">This Field Is Required</p>
+				<!--/ Input -->
+			</div>
+            <!-- <button class="button button-custom button-block">
+              	SIGN IN
+            </button> -->
+			<a href="" ng-click="GotoPage('home')" class="button button-custom button-block">
+              	SIGN IN
+            </a>
             </form>
           </div>
        	</div>
-        <div class="row">
-            <div class="col col-100" style="margin-bottom:0px;">
-            	<p><a href="#/app/register" class="positive">न्यू यूजर ? साइन अप </a></p>                
-                <p><a href="#/app/forgot-password" class="positive">फॉरगॉट पासवर्ड ? </a></p>
-            </div>
-        </div>
+		<div class="row">
+			<div class="col col-100 text-center">
+				<p class="text-center"><a class="text-white" href="#/app/register">New Here ? Sign Up</a></p>
+				<p class="text-center"><a class="text-white" href="#/app/forgot-password">Forgot Password ?</a></p>
+			</div>
+		</div>
     </ion-content>
 </ion-view>

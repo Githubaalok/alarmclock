@@ -46,14 +46,17 @@
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "demo"
         },
-        "cordova-plugin-media": {
-            "PACKAGE_NAME": "Jainoswalfederation"
-        },
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "Jainoswalfederation"
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "Jainoswalfederation"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "AlarmClock"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "AlarmClock"
         }
     },
     "dependent_plugins": {

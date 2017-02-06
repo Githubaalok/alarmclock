@@ -229,6 +229,72 @@ angular.module('starter.controllers', [])
 	};
 })
 /** Member Profile Controller **/
+.controller('alarmCtrl',function($scope,$http,$ionicLoading,$ionicHistory,$state,$ionicPopup,$ionicModal,$filter,$interval) {
+	
+	$scope.alarms = [];
+	$scope.alarm = {};
+    $ionicModal.fromTemplateUrl('add-alarm.html',function(modal){
+		$scope.setalarm = modal;
+	},
+	{
+		scope : $scope,
+		animation : 'slide-in-up'
+	});
+	$scope.newalarm = function (){
+		$scope.setalarm.show();  //-----> open our modal
+	};
+	$scope.closesetalarm = function(){
+		$scope.setalarm.hide(); // -----> Close our modal
+	};
+	$scope.createalarm = function (alarm) {
+		var time = alarm.hour+":"+alarm.min+" "+alarm.pos; // 12:00 PM Input to this format
+		 $scope.alarms.push({
+		   time  : time , on : true  
+		 });
+		 localStorage.setItem('alarms', JSON.stringify($scope.alarms)); //store alarms in localstorage as key alarms
+		 $scope.alarm = {}; // once saved the given data empty the form
+		 $scope.setalarm.hide(); //close the modal
+	};
+	$scope.offalarm = function(index){
+		if (index !== -1) {
+		  if($scope.alarms[index].on){
+			$scope.alarms[index].on = true;} //turn on alarm
+		  else{
+			$scope.alarms[index].on = false;} //turn off alarm
+		}
+		localStorage.setItem('alarms', JSON.stringify($scope.alarms)); //once change made save that in localstorage
+	  };
+	   $scope.removealarm = function(index){
+		$scope.alarms.splice(index,1); //Delete the index object from the array
+		localStorage.setItem('alarms', JSON.stringify($scope.alarms)); // we made a change we need to save it in localstorage
+	  };
+	  $scope.getalarms = function (){
+    $scope.alarms = (localStorage.getItem('alarms')!==null) ? JSON.parse(localStorage.getItem('alarms')) : [];//retrieve form localstorage
+    $scope.Time = $filter('date')(new Date(), 'hh:mm a'); //take the current time from machine
+   
+  };
+ $interval(function() {
+       $scope.alarmcheck(); //Check any alarm now once a minute
+   }, 5000);
+
+   $interval(function() {
+      $scope.Time = $filter('date')(new Date(), 'hh:mm a'); //Check current time one minute once
+   }, 5000);
+$scope.alarmcheck = function (){
+	
+       var input = $scope.alarms, time = $scope.Time; //Take object of arrays and time in local variable 
+       var i=0, len=input.length;
+       for (; i<len; i++) {
+         if (input[i].time.trim() == time.trim() && input[i].on) { //Check there's a alarm for now and it's in on 
+           $ionicPopup.alert({
+              title: 'Alarm',
+              template: 'Wake up'             // If it is there open popup to display
+            });
+         }
+     }
+   };
+})
+/** Member Profile Controller **/
 .controller('memberProfileCtrl',function($scope,$http,$ionicLoading,$ionicHistory,$state,$ionicPopup) {
 	$scope.GotoPage = function(page){ 
 		$ionicHistory.nextViewOptions({
