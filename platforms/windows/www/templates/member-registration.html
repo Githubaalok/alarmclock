@@ -1,0 +1,114 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Member Registration</h2>
+    </div>
+	<ion-content>
+    	<div class="row pagesubheader">
+          <div class="col col-100 text-center">
+          	<img src="img/siteimgs/matrimonial.jpg" alt="logo" style="height:100px;width:100px;margin-top:10px;border-radius: 50%;">
+          </div>
+       	</div>
+        <div class="row">
+          <div class="col col-100">
+            <form ng-submit="submitmemberregistrationForm();" ng-controller="memberregistrationCtrl" name="memberregistrationForm" novalidate>
+             <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Firstname (*)" ng-model="firstname" name="firstname">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Lastname (*)" ng-model="lastname" name="lastname">
+              </label>
+			  <div class="list" style="margin-top:10px;margin-bottom:10px;">
+				 <label class="item item-input item-select">
+					<div class="input-label">
+					  Country (*)
+					</div>
+					<select name="country" ng-model="country">
+					  <option ng-repeat = "countryname in countryarr" value="{{ countryname.name }}">{{ countryname.name }}</option>
+					</select>
+				  </label>
+			  </div>
+			  <label class="item item-input item-input-custom">Birth Date (*) :</label>
+			  <div class="row" style="padding:0px;">
+				<div class="col col-30" style="padding:0px;">
+					<div class="list">
+					 <label class="item item-input item-select">
+						<div class="input-label" style="z-index:9;">
+							Day
+						</div>
+						<select name="day" ng-model="day">
+							<option ng-repeat="d in daysarr" value="{{ d }}">{{ d }}</option>
+						</select>
+					  </label>
+				  </div>
+				</div>
+				<div class="col col-40" style="padding:0px;">
+					<div class="list">
+					 <label class="item item-input item-select">
+						<div class="input-label" style="z-index:9;">
+							Month
+						</div>
+						<select name="month" ng-model="month">
+							<option ng-repeat="m in monthsarr" value="{{ m.m1 }}">{{ m.M }}</option>
+						</select>
+					  </label>
+				  </div>
+				</div>
+				<div class="col col-30" style="padding:0px;">
+					<div class="list">
+					 <label class="item item-input item-select">
+						<div class="input-label" style="z-index:9;">
+							Year 
+						</div>
+						<select name="year" ng-model="year">
+							<option ng-repeat="y in yearsarr" value="{{ y }}">{{ y }}</option>
+						</select>
+					  </label>
+				  </div>
+				</div>
+			  </div>
+			  <div class="list" style="margin-top:10px;margin-bottom:10px;">
+				 <label class="item item-input item-select">
+					<div class="input-label">
+					  Mother Tongue 
+					</div>
+					<select name="mother_tongue" ng-model="mother_tongue">
+					  <option ng-if="mother_tongue1.success == 'Y'" ng-repeat = "mother_tongue1 in mother_tongues" value="{{ mother_tongue1.option }}">{{ mother_tongue1.option }}</option>
+					</select>
+				  </label>
+			  </div>
+			  <!--<div class="list" style="margin-top:10px;margin-bottom:10px;">
+				 <label class="item item-input item-select">
+					<div class="input-label">
+					  Professional 
+					</div>
+					<select name="professional" ng-model="professional">
+					  <option ng-if="profession.success == 'Y'" ng-repeat = "profession in professionals" value="{{ profession.option }}">{{ profession.option }}</option>
+					</select>
+				  </label>
+			  </div>-->
+			  <label class="item item-input item-input-custom">
+				<textarea placeholder="Biographical Info" rows="4" name="description" ng-model="description"></textarea>
+			  </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="E-Mail (*)" ng-model="user_email" name="user_email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="Password (*)" ng-model="password" name="password">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="Confirm Password (*)" ng-model="con_password" name="con_password">
+              </label>
+			  <input type="file" ng-model="photo" valid-file >
+              <button class="button button-positive button-block">
+             	 Register
+              </button>
+            </form>
+          </div>
+       	</div>
+        <div class="row">
+            <div class="col col-100" style="margin-bottom:80px;">
+            	<p><a href="#/app/member-login" class="positive">Already A User ? Login</a></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

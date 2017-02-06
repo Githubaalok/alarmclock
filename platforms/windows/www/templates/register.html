@@ -1,0 +1,41 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">रजिस्टर</h2>
+    </div>
+	<ion-content>
+    	<div class="row pagesubheader">
+          <div class="col col-100 text-center">
+          	<img src="http://makerits.com/jainoswalsajnanfedration/wp-content/uploads/2016/11/Oswal-Jain-sajnan-jos-logjo-2.png" alt="logo" style="height:100px;width:100px;margin-top:10px;">
+          </div>
+       	</div>
+        <div class="row">
+          <div class="col col-100">
+            <form ng-submit="submitregistrationForm();" ng-controller="registrationCtrl" name="registrationForm" novalidate>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="प्रथम नाम (*)" ng-model="firstname" name="firstname">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="आखिरी नाम (*)" ng-model="lastname" name="lastname">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="ईमेल (*)" ng-model="user_email" name="user_email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="पासवर्ड (*)" ng-model="password" name="password">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="कन्फर्म पासवर्ड (*)" ng-model="con_password" name="con_password">
+              </label>
+              <button class="button button-balanced button-block">
+             	 Register
+              </button>
+            </form>
+          </div>
+       	</div>
+        <div class="row">
+            <div class="col col-100" style="margin-bottom:80px;">
+            	<p><a href="#/app/login" class="positive">पहले से रजिस्टर ? लॉगिन</a></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

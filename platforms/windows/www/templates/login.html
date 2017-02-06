@@ -1,0 +1,33 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">लॉगिन</h2>
+    </div>
+	<ion-content>
+    	<div class="row pagesubheader">
+          <div class="col col-100 text-center">
+          	<img src="http://makerits.com/jainoswalsajnanfedration/wp-content/uploads/2016/11/Oswal-Jain-sajnan-jos-logjo-2.png" alt="logo" style="height:100px;width:100px;margin-top:10px;">
+          </div>
+       	</div>
+        <div class="row">
+          <div class="col col-100">
+            <form ng-submit="submitloginForm();" ng-controller="loginCtrl" name="loginForm" novalidate>
+             <label class="item item-input item-input-custom">
+                <input type="text" placeholder="ईमेल (*)" ng-model="email" name="email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="पासवर्ड (*)" ng-model="password" name="password">
+              </label>
+              <button class="button button-balanced button-block">
+              	लॉगिन
+              </button>
+            </form>
+          </div>
+       	</div>
+        <div class="row">
+            <div class="col col-100" style="margin-bottom:0px;">
+            	<p><a href="#/app/register" class="positive">न्यू यूजर ? साइन अप </a></p>                
+                <p><a href="#/app/forgot-password" class="positive">फॉरगॉट पासवर्ड ? </a></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

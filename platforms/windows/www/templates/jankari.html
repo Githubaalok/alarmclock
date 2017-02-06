@@ -1,0 +1,25 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">जानकारी</h2>
+    </div>
+	<ion-content>
+    	<div class="row pagesubheader">
+          <div class="col col-100 text-center">
+          	<img src="http://makerits.com/jainoswalsajnanfedration/wp-content/uploads/2016/11/Oswal-Jain-sajnan-jos-logjo-2.png" alt="logo" style="height:100px;width:100px;margin-top:10px;">
+			<h3 class="primary">अखिल भारतीय जैन ओसवाल साजनान फेडरेशन ( रजि. ) </h3>
+          </div>
+       	</div>
+        <div class="row" ng-repeat = "data in jankari">
+          <div class="col col-100" ng-if = "data.success == 'Y'">
+			<h4 style="color:#00008B" >{{ data.pera_heading }}</h4>
+			<div ng-repeat = "peragraph in data.all_peragraph">
+				<p ng-if = "peragraph.content">{{ peragraph.content }}</p>
+			</div>
+          </div>
+       	</div>
+        <div class="row">
+            <div class="col col-100" style="margin-bottom:90px;border-top:2px solid #3a3aa5;">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

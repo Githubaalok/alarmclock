@@ -1,0 +1,56 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">संपर्क</h2>
+    </div>
+    <ion-content>
+     <div class="row pagesubheader">
+      <div class="col col-100">
+      	<h3>संपर्क करें</h3>
+        <form ng-submit="submit();" ng-controller="contactCtrl" name="contactForm" novalidate>
+           <div class="list">
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="नाम (*)" name="Name" ng-model="Name">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="पिता/पति का नाम (*)" name="pati_patni_name" ng-model="pati_patni_name">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="पता (*)" name="Address" ng-model="Address">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="शहर (*)" name="City" ng-model="City">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="tel" placeholder="कांटेक्ट नंबर (*)" name="Contact_number" ng-model="Contact_number">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="ईमेल (*)" name="Email" ng-model="Email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <textarea placeholder="कोई सन्देश" rows="4" name="your_message" ng-model="your_message"></textarea>
+              </label>
+              <button class="button button-balanced button-block" >
+                  Submit
+              </button>
+            </div>
+         </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100">
+      	<h3>पता : </h3>
+        <p style="margin:0px;"> अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. ) </p>
+        <p style="margin:0px;"> कार्यालय: जी -1 मंगलम हाइट्स, 19/16 – ई, </p>
+        <p style="margin:0px;"> विश्राम कालोनी, वाय इन रोड इंदौर (मध्यप्रदेश) </p>
+        <p style="margin:0px;"> फोन: 0731 – 4036672, </p>
+        <p style="margin:0px;"> ईमेल- sajnanjos@gmail.com </p>
+        <p style="margin:0px;"> कार्यालय संपर्क – सचिन – 9755495095 </p>
+      </div>
+    </div>
+    <map on-create="mapCreated(map)" style="height:50%"></map>
+    <div class="row">
+      <div class="col col-100" style="margin-bottom:80px;">
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

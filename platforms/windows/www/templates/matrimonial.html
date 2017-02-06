@@ -1,0 +1,78 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Matrimonial</h2>
+    </div>
+	<ion-content>
+		<!-- Slider -->
+    	<ion-slide-box on-slide-changed="OnSlideChanged(index)" auto-play="true" does-continue="true">
+          <ion-slide ng-repeat="data in slider" style="margin-top:43px;">
+              <img src="{{data.slider_images}}" alt="sliderimg">
+          </ion-slide>
+		</ion-slide-box>
+		<!-- Slider End -->
+		<!-- Second Section  -->
+        <div class="row">
+        	<div class="col col-100 text-center">
+            	<img src="img/siteimgs/divider_1.png" style="width:100%" alt="divider">
+            </div>
+        </div>
+        <div class="row icon-box-high" style="margin:0px 0px 10px 0px;" ng-repeat="data in reviews">
+		  <div class="col col-50">
+			 <img ng-if="$even" src="{{ data.img_url }}" alt="image" style="height:100%;width:100%;">
+			 <h4 ng-if="$odd" style="margin-top:0px;margin-bottom:0px;">{{ data.told_by }} </h4>
+			 <p ng-if="$odd">{{ data.quotes_content }}</p>
+		  </div>
+		  <div class="col col-50">
+			<img ng-if="$odd" src="{{ data.img_url }}" alt="image" style="height:100%;width:100%;">
+			<h4 ng-if="$even" style="margin-top:0px;margin-bottom:0px;">{{ data.told_by }} </h4>
+			<p ng-if="$even">{{ data.quotes_content }}</p>
+		  </div>
+        </div>
+        <!--/ Second Section End  -->
+        <!-- Wedding Gallery  -->
+        <div class="row">
+        	<div class="col col-100 text-center">
+				<img src="img/siteimgs/divider_1.png" style="width:100%" alt="divider">
+            	<h3 style="margin-top:0px;">Our Wedding Gallery</h3>
+            </div>
+        </div>
+        <!--<div class="row" style="-webkit-flex-wrap: wrap;flex-wrap: wrap;">
+        	<div class="col col-50 text-center" ng-repeat="data in gallery" >
+                <img src="{{ data.image_url }}" alt="sliderimg" style="height:150px;width:100%;">
+            </div> 
+			
+        </div>-->
+		<div ng-repeat="data in gallery">
+			<div class="row" ng-if="$even">
+				<div ng-if="gallery[$index].image_url" class="col col-50 text-center">
+					<img src="{{ gallery[$index].image_url }}" alt="sliderimg" style="height:140px;width:100%;">
+				</div>
+				<div ng-if="gallery[$index + 1].image_url" class="col col-50 text-center">
+					<img src="{{  gallery[$index + 1].image_url }}" alt="sliderimg" style="height:140px;width:100%;">
+				</div>
+			</div>
+		</div>
+		<!--/ Wedding Gallery End  -->
+		<!-- Creative Ideas  -->
+		<div class="row">
+        	<div class="col col-100 text-center">
+				<img src="img/siteimgs/divider_1.png" style="width:100%" alt="divider">
+            </div>
+        </div>
+		<div class="row">
+        	<div class="col col-100 text-center">
+				<div class="creative_idea">
+				  <div class="creative_idea_img">
+					<img src="{{ creative_ideas.image_url }}" alt="image" style="height:250px;width:100%;">
+				  </div>
+				  <div class="creative_idea_text">
+					<h3>{{ creative_ideas.main_heading }}</h3>
+					<h5>{{ creative_ideas.sub_heading }}</h5>
+				  </div>
+				</div>
+			</div>
+        </div>
+		<!--/ Creative Ideas End  -->
+        
+    </ion-content>
+</ion-view>

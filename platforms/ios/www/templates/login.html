@@ -1,0 +1,43 @@
+<ion-view view-title="Login" hide-nav-bar="true">
+	<ion-content>
+    	<div class="row">
+          <div class="col col-100 text-center">
+          	<img src="img/siteimgs/logo.png" alt="logo" style="height:120px;width:120px;">
+          </div>
+       	</div>
+        <div class="row">
+          <div class="col col-100">
+            <form name="memberloginForm1" ng-submit="submitLoginForm1(memberloginForm);" novalidate>
+             <div class="list list-custom">
+			    <!-- Input -->
+				  <label class="item item-input item-custom">
+					<input type="email" placeholder="Email" ng-model="email" name="email" ng-maxlength="30" required>
+				  </label>
+				  <p class="error-p" ng-show="memberloginForm.email.$error.required && (!memberloginForm.email.$pristine || memberloginForm.$submitted)">This Field Is Required</p>
+				  <p class="error-p" ng-show="memberloginForm.email.$error.maxlength && (!memberloginForm.email.$pristine || memberloginForm.$submitted)">Cannot Longer Than 30 Characters</p>
+				  <p class="error-p" ng-show="memberloginForm.email.$invalid && (!memberloginForm.email.$pristine || memberloginForm.$submitted) && !memberloginForm.email.$error.required">Email Is Not Valid</p>
+				<!--/ Input -->
+			    <!-- Input -->
+				  <label class="item item-input item-custom">
+					<input type="password" placeholder="Password" ng-model="password" name="password" required>
+				  </label>
+				  <p class="error-p" ng-show="memberloginForm.password.$error.required && (!memberloginForm.password.$pristine || memberloginForm.$submitted)">This Field Is Required</p>
+				<!--/ Input -->
+			</div>
+            <!-- <button class="button button-custom button-block">
+              	SIGN IN
+            </button> -->
+			<a href="" ng-click="GotoPage('home')" class="button button-custom button-block">
+              	SIGN IN
+            </a>
+            </form>
+          </div>
+       	</div>
+		<div class="row">
+			<div class="col col-100 text-center">
+				<p class="text-center"><a class="text-white" href="#/app/register">New Here ? Sign Up</a></p>
+				<p class="text-center"><a class="text-white" href="#/app/forgot-password">Forgot Password ?</a></p>
+			</div>
+		</div>
+    </ion-content>
+</ion-view>

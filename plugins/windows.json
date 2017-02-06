@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "demo"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-filepath": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-actionsheet": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "demo"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "Jainoswalfederation"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "Jainoswalfederation"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "Jainoswalfederation"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "Jainoswalfederation"
+        }
+    }
+}

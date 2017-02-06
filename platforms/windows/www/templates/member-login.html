@@ -1,0 +1,33 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Member Login</h2>
+    </div>
+	<ion-content>
+    	<div class="row pagesubheader">
+          <div class="col col-100 text-center">
+          	<img src="img/siteimgs/matrimonial.jpg" alt="logo" style="height:120px;width:120px;margin-top:10px;border-radius: 50%;">
+          </div>
+       	</div>
+        <div class="row">
+          <div class="col col-100">
+            <form ng-submit="submitmemberloginForm();" ng-controller="memberloginCtrl" name="memberloginForm" novalidate>
+             <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Email (*)" ng-model="email" name="email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="password" placeholder="Password (*)" ng-model="password" name="password">
+              </label>
+              <button class="button button-positive button-block">
+              	Login
+              </button>
+            </form>
+          </div>
+       	</div>
+        <div class="row">
+            <div class="col col-100" style="margin-bottom:0px;">
+            	<p><a href="#/app/member-registration" class="positive">New User ? Sign-Up </a></p>                
+                <p><a href="#/app/forgot-password-member" class="positive">Forgot Password ? </a></p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

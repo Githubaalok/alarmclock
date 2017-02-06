@@ -1,0 +1,29 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Member List</h2>
+    </div>
+	<ion-content>
+		<!-- Member List  -->
+        <div class="row pagesubheader">
+        	<div class="col col-100">
+            	<div class="list">
+					<div ng-repeat="data in members">
+						<a class="item item-thumbnail-left memberavatar" ui-sref="app.member-profile({user_id:data.user_id})">
+						  <img ng-if="data.image_url" src="{{ data.image_url }}" alt="avatar">
+						  <img ng-if="data.image_url == null" src="img/siteimgs/boy-512.png" alt="avatar">
+						  <h2>{{ data.fname }} {{ data.lname }}</h2>
+						  <p><i ng-if = "data.Professional" class="ion-ios-briefcase"></i> <b>{{ data.Professional }}</b></p>
+						  <p><i ng-if = "data.dob" class="ion-android-calendar"></i> <b>{{ data.dob }}</b></p>
+						</a>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div class="row">
+            <div class="col col-100 text-center" style="margin-bottom:70px;">
+            	
+            </div>
+        </div>
+        <!--/ Member List End  -->
+    </ion-content>
+</ion-view>

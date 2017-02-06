@@ -1,0 +1,56 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Contact</h2>
+    </div>
+    <ion-content>
+     <div class="row pagesubheader">
+      <div class="col col-100">
+      	<h3>Contact Us</h3>
+        <form ng-submit="submit();" ng-controller="matrimonial_contactCtrl" name="matrimonial_contactForm" novalidate>
+           <div class="list">
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Name (*)" name="Name" ng-model="Name">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Father's / Husband Name (*)" name="pati_patni_name" ng-model="pati_patni_name">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Address (*)" name="Address" ng-model="Address">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="City (*)" name="City" ng-model="City">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="tel" placeholder="Contact Number (*)" name="Contact_number" ng-model="Contact_number">
+              </label>
+              <label class="item item-input item-input-custom">
+                <input type="text" placeholder="Email (*)" name="Email" ng-model="Email">
+              </label>
+              <label class="item item-input item-input-custom">
+                <textarea placeholder="Message" rows="4" name="your_message" ng-model="your_message"></textarea>
+              </label>
+              <button class="button button-positive button-block" >
+                  Submit
+              </button>
+            </div>
+         </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100">
+      	<h3>Address: </h3>
+        <p style="margin:0px;"> A.B. Jain Oswal Sajnan Fedration (Reg.) </p>
+        <p style="margin:0px;"> Office : G-1 Manglam Height, 19/16-E, </p>
+        <p style="margin:0px;"> Vishram Calony, Y N Road Indore (M.P.) </p>
+        <p style="margin:0px;"> Phone : 0731 – 4036672, </p>
+        <p style="margin:0px;"> Email - sajnanjos@gmail.com </p>
+        <p style="margin:0px;"> Office Contact : Sachine-9755495095 </p>
+      </div>
+    </div>
+    <map on-create="mapCreated(map)" style="height:50%"></map>
+    <div class="row">
+      <div class="col col-100" style="margin-bottom:80px;">
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

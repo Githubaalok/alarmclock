@@ -1,0 +1,59 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">Member Profile</h2>
+    </div>
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">{{ memberdata.fname }} {{ memberdata.lname }}</h2>
+    </div>
+	<ion-content>
+    	<div class="banner pagesubheader">
+          <div class="banner_img">
+            <img ng-if="memberdata.image_url" src="{{ memberdata.image_url }}" alt="avatar" style="height:200px;width:100%;">
+			<img ng-if="memberdata.image_url == null" src="img/siteimgs/boy-512.png" alt="avatar" style="height:200px;width:100%;">
+          </div>
+          <div class="banner_text">
+            
+          </div>
+        </div>
+		<div class="list">
+		  <div class="item item-divider">
+			General Information
+		  </div>
+		  <a class="item " ng-if="memberdata.fname">
+			<span class="datatitle">Firstname</span> <b class="datavalue">{{ memberdata.fname }}</b>
+		  </a>
+		  <a class="item" ng-if="memberdata.lname">
+			<span class="datatitle">Lastname</span> <b class="datavalue">{{ memberdata.lname }}</b>
+		  </a>
+		  <a class="item" ng-if="memberdata.dob">
+			<span class="datatitle">Date Of Birth</span> <b class="datavalue">{{ memberdata.dob }}</b>
+		  </a>
+		  <a class="item" ng-if="memberdata.Professional">
+			<span class="datatitle">Professional</span> <b class="datavalue">{{ memberdata.Professional }}</b>
+		  </a>
+		  <a class="item" ng-if="memberdata.mother_tongue">
+			<span class="datatitle">Mother Tongue</span> <b class="datavalue">{{ memberdata.mother_tongue }}</b>
+		  </a>
+		  <div class="item item-divider">
+			Contact Info
+		  </div>
+		  <a class="item" ng-if="memberdata.Country">
+			<span class="datatitle">Country</span> <b class="datavalue">{{ memberdata.Country }}</b>
+		  </a>
+		  <a class="item" ng-if="memberdata.email">
+			<span class="datatitle">E-Mail</span> <b class="datavalue">{{ memberdata.email }}</b>
+		  </a>
+		  <div class="item item-divider">
+			About Yourself
+		  </div>
+		  <a class="item" style="white-space: initial;" ng-if="memberdata.description">
+			{{ memberdata.description }}
+		  </a>
+		</div>
+        <div class="row">
+            <div class="col col-100 text-center" style="margin-bottom:60px;">
+            	
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

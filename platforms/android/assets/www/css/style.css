@@ -1,0 +1,104 @@
+/* Empty. Add your own CSS if you like */
+@charset "utf-8";
+/* CSS Document */
+/* body background color */
+.backcolor{background-color:#F8F8F8}
+/* ancher config */
+a{text-decoration: none; display:block; width:100%; color:#000;}
+.button.button-icon.button-clear.ion-navicon{
+	color:#FFF;
+}
+
+/** New For Challenges **/
+.slider { height: auto; }
+map { display: block;width: 100%;height: 100%; }
+.scroll { height: 100%; }
+.scroll-content { background-image:url('../../www/img/siteimgs/back-img.png'); background-position: center top; background-repeat: no-repeat; background-size: cover; }
+.list-custom .item-custom {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.item-custom input{
+    color:#fff;
+}
+.error-p {
+    border-top: 2px solid darksalmon;
+    color: darksalmon;
+    font-style: oblique;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 11px darksalmon;
+}
+.button-custom { background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0; border-color: rgba(255, 255, 255, 0.8); border-radius: 0;border-style: solid; border-width: 1px; color: #fff; }
+.button-custom:hover { color: #fff; }
+.button-custom .button.active, .button.activated { background:rgba(0,0,0,0.45);border:1px solid #fff; }
+.bar.bar-primary { background-color:#6EC8B7;color: #fff; border: medium none;}
+.bar.bar-primary .button , .bar.bar-primary h1 , .bar.bar-primary h2 , .bar.bar-primary h3 { color: #fff !important;  }
+.item-custom select {
+    background: rgba(0,0,0,0);
+    color: #fff;
+}
+.item-custom .input-label {
+    color: #fff;
+}
+.bg-on-img {
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    right: 2px;
+    top: 6px;
+	border-radius: 50%;
+    background: rgba(0,255,166,0.5);
+}
+.user-list-custom .item-thumbnail-left {
+	background-color: rgba(0,0,0,0.4);
+	border-color: rgba(255,255,255,0.3);
+}
+.user-list-custom h2 , .user-list-custom p  {
+	color:#fff;
+}
+.text-center { text-align:center; } .text-white { color: #fff; } .text-orange { color: orange; } 
+.text-magenta { color:#FA5380; } .text-palegreen { color:palegreen;}
+.overlay-light { background:rgba(0,0,0,0.5); margin-top:0px !important; }
+.overlay-dark { background:rgba(0,0,0,0.75); margin-top:0px !important; }
+.icon-box-high { border: 1px solid #56a7a2; box-shadow: 0 0 8px 0 #56a7a2; padding: 10px; }
+.custom-menu .item-content.activated { background-color: rgba(0,0,0,0.4); }
+
+
+/** old Css **/
+.icon.icon-list { color: rgba(255, 255, 255, 0.3); font-size: 14px; }
+.datatitle { color: #fff; float: left; text-align: left; white-space: normal; width: 40%; }
+.datavalue  { float: right; color: #fff; text-align: right; white-space: normal; width: 60%; }
+.custom-logo { background: rgba(0, 0, 0, 0.39) none repeat scroll 0 0; }
+.custom-menu .item { background: rgba(0, 0, 0, 0.31) none repeat scroll 0 0 !important; border-color: rgba(0, 0, 0, 0); }
+.custom-menu .item-content { background: rgba(0, 0, 0, 0) none repeat scroll 0 0; color: #fff; font-size: 14px; }
+.custom-menu .icon { font-size: 18px; }
+.custom-menu .item-content { padding: 6px; }
+.custom-menu .item.item-custom { padding: 6px; }
+.custom-menu .item.item-custom > span { color: #fff; font-size: 14px; padding-left: 50px; }
+.custom-menu .icon.my { left: 20px; position: absolute; }
+.custom-menu .ion-dd { color: #fff; font-size: 10px; margin-right: 6px; opacity: 0.2; }
+.ion-opacity { opacity: 0.7; }
+.custom-menu .item.child-item { background: rgba(0, 0, 0, 0.52) none repeat scroll 0 0 !important; color: #fff; font-size: 14px; padding: 5px 5px 5px 65px; }
+.sub-menu-ion { font-size: 10px; left: 35px; position: absolute; }
+.popup-head {border-bottom: 1px solid rgba(255,255,255,0.3);}
+.bottom-border { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.popup {background:-webkit-linear-gradient(-45deg, rgb(4,48,73) 5%,rgb(41,137,216) 64%,rgb(32,124,202) 76%,rgb(125,185,232) 100%) !important;border-radius: 6px !important;border: 1px solid #ffffff;}
+.popup h3 {color:#ffffff;}.button.ng-binding.button-positive{background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #1e5799 13%, #2989d8 58%, #207cca 99%, #7db9e8 100%) repeat scroll 0 0;}
+.icon-popup { color: #fff; font-size: 35px; }
+.shadow-custom { position:relative;width:100%;line-height:0; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+.bg-orange { background: #f8ac59 none repeat scroll 0 0; margin: 0 2px 9px; max-width: 40%; }
+.bg-blue { background: #1c84c6 none repeat scroll 0 0; margin: 0 2px 9px; max-width: 40%; }
+.bg-green { background: #23c6c8 none repeat scroll 0 0; margin: 0 2px 9px; max-width: 40%; }
+.bg-orange  p , .bg-blue  p , .bg-green  p { color: #ffffff; font-size: 15px; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100% !important; margin:0px; }
+/**.back-img { background: rgba(0, 0, 0, 0) url("../img/siteimgs/Mountain-Biking-Adventure-Wallpaper.jpg") repeat fixed 0 0 / cover ; }*/
+.bg-white { background: #fff none repeat scroll 0 0; padding: 5px; }
+.button-primary { border-color: #56A7A2 !important; color: #56A7A2 !important; }
+.button-primary.activated { background-color: #56A7A2 !important; box-shadow: none !important; color: #fff !important; }
+.spinner.spinner-primary { fill: #56A7A2; stroke: #56A7A2; }
+

@@ -1,0 +1,92 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+	<div class="bar bar-subheader bar-secondary">
+      <h2 class="title secondary">बिजनेस डायरेक्ट्री</h2>
+    </div>
+    <ion-content>
+     <div class="row pagesubheader">
+      <div class="col col-100">
+      	<h3>बिजनेस डायरेक्ट्री हेतु आवेदन फार्म</h3>
+        <form ng-submit="submitBusinessdirForm();" ng-controller="business_directoryCtrl" name="businessdirForm" novalidate>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="नाम (*)" name="bs_name" ng-model="bs_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र (*)" name="bs_gotr" ng-model="bs_gotr">
+          </label>
+          <div class="list" style="margin-top:10px;margin-bottom:10px;">
+             <label class="item item-input item-select">
+                <div class="input-label">
+                  ग्रुप का नाम (*)
+                </div>
+                <select name="bs_group" ng-model="bs_group">
+                  <option value="इंदौर पायोनियर">इंदौर पायोनियर</option>
+                  <option value="इंदौर नोबल">इंदौर नोबल</option>
+                  <option value="इंदौर प्रिमीयम">इंदौर प्रिमीयम</option>
+                  <option value="इंदौर क्लासिक">इंदौर क्लासिक</option>
+                </select>
+              </label>
+          </div>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="फर्म का नाम (*)" name="bs_farm_name" ng-model="bs_farm_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="व्यवसाय या सर्विस का पता (*)" name="bs_service" ng-model="bs_service">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="पिनकोड (*)" name="bs_pin" ng-model="bs_pin">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="निवास का पता (*)" name="bs_address" ng-model="bs_address">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="पिनकोड (*)" name="bs_pin_2" ng-model="bs_pin_2">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="आपके साथ व्यवसाय में सहयोगी परिवार के अन्य सदस्यों / पार्टनर के नाम" rows="4" name="partner_name" ng-model="partner_name"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="बिजनेस केटेगरी का नाम ( आइटम )( जो आगे इण्डेक्स में आएगा ) (*)" name="bs_catagory" ng-model="bs_catagory">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="अन्य व्यवसाय का नाम ( आइटम)" name="bs_other_business" ng-model="bs_other_business">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="फोन नं. कार्यालय (*)" name="bs_phone_number" ng-model="bs_phone_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="मो. नं. 1. (*)" name="bs_mob_1" ng-model="bs_mob_1">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="वाट्सअप नं. 1. (*)" name="bs_wtsup_no" ng-model="bs_wtsup_no">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="मो. नं. 2." name="bs_mob_2" ng-model="bs_mob_2">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="वाट्सअप नं. 2." name="bs_wtsup_no_2" ng-model="bs_wtsup_no_2">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="ईमेल 1 (*)" name="bs_email" ng-model="bs_email">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="ईमेल 2 " name="bs_email_2" ng-model="bs_email_2">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="वेब साइट" name="bs_website" ng-model="bs_website">
+          </label>
+          <h5 style="width:80%">पास पोर्ट साइज़ फोटो</h5>
+          <input type="file" ng-model="bs_photo" name="bs_photo" valid-file >
+          <h5 style="width:80%">आपका विजिटिंग कार्ड यहां फ्लिप करें</h5>
+          <input type="file" ng-model="bs_visit_card" name="bs_visit_card" valid-file >
+          <button class="button button-balanced button-block" >
+              Submit
+          </button>
+		</form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100" style="margin-bottom:60px;">
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,209 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+    <div class="bar bar-subheader bar-secondary">
+      <h2 class="title">प्रत्याशी का परिचय-पत्र</h2>
+    </div>
+    <ion-content>
+     <div class="row pagesubheader">
+      <div class="col col-100">
+      	<h3>परिचय-पत्र</h3>
+        <h4 class="text-center primary">( केवल एक प्रत्याशी के लिए , कृपया आवेदन पत्र हिंदी में स्पष्ट अक्षरो में भरे )</h4>
+        <form ng-submit="submit();" ng-controller="parichaypatraCtrl" name="parichaypatraForm" novalidate>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="प्रत्याशी का पूरा नाम (*)" name="pratayasi_name" ng-model="pratayasi_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र (*)" name="gottr" ng-model="gottr">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="निवास का पता (*)" name="Address" ng-model="Address">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="फ़ोन नंबर (*)" name="Phone_number" ng-model="Phone_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="मो. नंबर (*)" name="Mobile_number" ng-model="Mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="कार्यालय से सुचना किस मो. नं. पर चाहते है (*)" name="Suchna_number" ng-model="Suchna_number">
+          </label>
+          <!--<label class="item item-input item-input-custom">
+            <input type="text" placeholder="जन्म दिनांक (*)" name="Date_of_birth" ng-model="Date_of_birth">
+          </label>-->
+          <h5 style="width:80%">जन्म दिनांक (*)</h5>
+          <div class="row" style="margin-top:10px;padding:0px;">
+          	<div class="col col-30" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	दिन 
+                    </div>
+                    <select name="day" ng-model="day">
+                    	<option ng-repeat="d in daysarr" value="{{ d }}">{{ d }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+            <div class="col col-40" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	महीना
+                    </div>
+                    <select name="month" ng-model="month">
+                    	<option ng-repeat="m in monthsarr" value="{{ m.m1 }}">{{ m.M }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+            <div class="col col-30" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	वर्ष 
+                    </div>
+                    <select name="year" ng-model="year">
+                    	<option ng-repeat="y in yearsarr" value="{{ y }}">{{ y }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+          </div>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="जन्म समय (*)" name="Birth_time" ng-model="Birth_time">
+          </label>
+          <ion-list>
+            <ion-radio ng-model="samyakaal" name="samyakaal" value="दिन">दिन</ion-radio>
+            <ion-radio ng-model="samyakaal" name="samyakaal" value="रात्रि">रात्रि</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+           <input type="text" placeholder="जन्म स्थान" name="Birth_place" ng-model="Birth_place">
+          </label>
+          <label class="item item-input item-input-custom">वर्ण :</label>
+          <ion-list>
+            <ion-radio ng-model="Types_vard" name="Types_vard" value="गौर">गौर</ion-radio>
+            <ion-radio ng-model="Types_vard" name="Types_vard" value="गेहुआं">गेहुआं</ion-radio>
+       	  </ion-list>
+           <label class="item item-input item-input-custom">
+            <input type="text" placeholder="ऊंचाई" name="Hight" ng-model="Hight">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="बजन" name="Wait" ng-model="Wait">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="ब्लड ग्रुप" name="Blood_group" ng-model="Blood_group" required>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="शिक्षा (*)" name="Education" ng-model="Education">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="ईमेल (*)" name="email162" ng-model="email162">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="प्रत्याशी का व्यवसाय / सर्विस का नाम - पता (*)" name="Business" ng-model="Business">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="प्रत्याशी की मासिक आय (अंको में) (*)" name="Income" ng-model="Income">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="रूचि (*)" name="Intrested" ng-model="Intrested">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="विशेष जानकारी (*)" rows="4" name="Important_details" ng-model="Important_details"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="पिता का नाम (*)" name="Father_name" ng-model="Father_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="पिता का मो./फ़ोन (*)" name="Father_mobile_number" ng-model="Father_mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="माता का नाम एवं कार्य (*)" rows="4" name="Mother_name_work" ng-model="Mother_name_work"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र स्वयं (*)" name="gotter_soyam" ng-model="gotter_soyam">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र मामा (*)" name="gotter_mama" ng-model="gotter_mama">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र दादी (*)" name="gotter_dadi" ng-model="gotter_dadi">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="गोत्र नानी (*)" name="gotter_nani" ng-model="gotter_nani">
+          </label>
+          <label class="item item-input item-input-custom">मांगलिक :</label>
+          <ion-list>
+            <ion-radio ng-model="manglik" name="manglik" value="हाँ">हाँ</ion-radio>
+            <ion-radio ng-model="manglik" name="manglik" value="नही">नहीं</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">पत्रिका मिलान के पक्ष में :</label>
+          <ion-list>
+            <ion-radio ng-model="Patrika_milan" name="Patrika_milan" value="हाँ">हाँ</ion-radio>
+            <ion-radio ng-model="Patrika_milan" name="Patrika_milan" value="नही">नहीं</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="अन्य" name="other" ng-model="other">
+          </label>
+          <label class="item item-input item-input-custom"> धार्मिक मान्यता :</label>
+          <ion-list>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="मंदिर">मंदिर</ion-radio>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="स्थानक">स्थानक</ion-radio>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="तेरापंथ">तेरापंथ</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder=" भाई विवाहित (संख्या लिखे)" name="bhai_vivahit" ng-model="bhai_vivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="भाई अविवाहित (संख्या लिखे)" name="bhai_avivahit" ng-model="bhai_avivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="बहन विवाहित (संख्या लिखे)" name="bahan_vivahit" ng-model="bahan_vivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="बहन विवाहित (संख्या लिखे)" name="bahan_avivahit" ng-model="bahan_avivahit">
+          </label>
+          <label class="item item-input item-input-custom">टिक करे आवास (*)</label>
+          <ion-list>
+            <ion-radio ng-model="residentsinc" name="residentsinc" value="निजी">निजी</ion-radio>
+            <ion-radio ng-model="residentsinc" name="residentsinc" value="किराये से">किराये से</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder=" वाहन दुपहिया (संख्या लिखे) " name="vahan_2wheeler" ng-model="vahan_2wheeler">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="वाहन चार पहिया (संख्या लिखे) " name="vahan_4wheeler" ng-model="vahan_4wheeler">
+          </label>
+          <label class="item item-input item-input-custom" style="font-size:12px;">सम्मेलन में प्रत्याशी की उपस्थिति रहेगी या नहीं टिक करे (*)</label>
+          <ion-list>
+            <ion-radio ng-model="upstithiti" name="upstithiti" value="हाँ">हाँ</ion-radio>
+            <ion-radio ng-model="upstithiti" name="upstithiti" value="नही">नही</ion-radio>
+       	  </ion-list>
+          <h5 style="width:80%">अन्य सम्पर्क सूत्र (*)</h5>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="नाम (*)" name="Other_contact" ng-model="Other_contact">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="पता (*)" rows="4" name="other_adderess" ng-model="other_adderess"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="मो. नंबर (*)" name="other_Mobile_number" ng-model="other_Mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="प्रत्याशी से संबधं (*)" name="Pratyashi_relationship" ng-model="Pratyashi_relationship">
+          </label>
+          <h5 style="width:80%">प्रत्याशी का पासपोर्ट साइज रंगीन 2 फोटो भेजे फोटो के पीछे प्रत्याशी का नाम अवश्य लिखे </h5>
+          <input type="file" ng-model="photo" valid-file >
+          <p class="primary" style="width:80%">मेरे द्वारा दी गई समस्त जानकारी पूर्णतः सत्य है एवं इसका सम्पूर्ण उत्तरदायित्व मुझ पर है </p>
+          <a href="#">नियम और शर्तें</a>
+          <button class="button button-balanced button-block" >
+              Submit
+          </button>
+		</form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100" style="margin-bottom:80px;">
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

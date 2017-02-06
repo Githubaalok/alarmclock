@@ -1,0 +1,204 @@
+<ion-view view-title="अ. भा. जैन ओसवाल साजनान फेडरेशन ( रजि. )">
+    <div class="bar bar-subheader bar-secondary">
+      <h2 class="title">Introduction Form</h2>
+    </div>
+    <ion-content>
+     <div class="row pagesubheader">
+      <div class="col col-100">
+        <form ng-submit="submit();" ng-controller="parichaypatraCtrl" name="introductionformForm" novalidate>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Full Name of Candidate (*)" name="pratayasi_name" ng-model="pratayasi_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Gotr (*)" name="gottr" ng-model="gottr">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Address (*)" name="Address" ng-model="Address">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Phone No." name="Phone_number" ng-model="Phone_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Mobile No.(*)" name="Mobile_number" ng-model="Mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Mobile No. For SMS Alert (*)" name="Suchna_number" ng-model="Suchna_number">
+          </label>
+          <h5 style="width:80%">Date Of Birth (*)</h5>
+          <div class="row" style="margin-top:10px;padding:0px;">
+          	<div class="col col-30" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	Day
+                    </div>
+                    <select name="day" ng-model="day">
+                    	<option ng-repeat="d in daysarr" value="{{ d }}">{{ d }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+            <div class="col col-40" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	Month
+                    </div>
+                    <select name="month" ng-model="month">
+                    	<option ng-repeat="m in monthsarr" value="{{ m.m1 }}">{{ m.M }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+            <div class="col col-30" style="padding:0px;">
+            	<div class="list">
+                 <label class="item item-input item-select">
+                    <div class="input-label" style="z-index:9;">
+                     	Year
+                    </div>
+                    <select name="year" ng-model="year">
+                    	<option ng-repeat="y in yearsarr" value="{{ y }}">{{ y }}</option>
+                    </select>
+                  </label>
+              </div>
+            </div>
+          </div>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Birth Time (*)" name="Birth_time" ng-model="Birth_time">
+          </label>
+          <ion-list>
+            <ion-radio ng-model="samyakaal" name="samyakaal" value="Day">Day</ion-radio>
+            <ion-radio ng-model="samyakaal" name="samyakaal" value="Night">Night</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+           <input type="text" placeholder="Birth Place" name="Birth_place" ng-model="Birth_place">
+          </label>
+          <label class="item item-input item-input-custom">Varn :</label>
+          <ion-list>
+            <ion-radio ng-model="Types_vard" name="Types_vard" value="Light skin">Light skin</ion-radio>
+            <ion-radio ng-model="Types_vard" name="Types_vard" value="Dark skin">Dark skin</ion-radio>
+       	  </ion-list>
+           <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Height (*)" name="Hight" ng-model="Hight">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Weight (*)" name="Wait" ng-model="Wait">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Blood Group" name="Blood_group" ng-model="Blood_group" required>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Qualification (*)" name="Education" ng-model="Education">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="E-mail (*)" name="email162" ng-model="email162">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Business / Service Name - Address(*)" name="Business" ng-model="Business">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Monthly Income of Candidate (In Digit) (*)" name="Income" ng-model="Income">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Interest (*)" name="Intrested" ng-model="Intrested">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="Special Information (*)" rows="4" name="Important_details" ng-model="Important_details"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Father's Name (*)" name="Father_name" ng-model="Father_name">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Father's Contact No. (*)" name="Father_mobile_number" ng-model="Father_mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="Mother's Name And Work (*)" rows="4" name="Mother_name_work" ng-model="Mother_name_work"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Gotr Self (*)" name="gotter_soyam" ng-model="gotter_soyam">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Gotr Mama (*)" name="gotter_mama" ng-model="gotter_mama">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Gotr Dadi (*)" name="gotter_dadi" ng-model="gotter_dadi">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Gotr Nani (*)" name="gotter_nani" ng-model="gotter_nani">
+          </label>
+          <label class="item item-input item-input-custom">Mangalik :</label>
+          <ion-list>
+            <ion-radio ng-model="manglik" name="manglik" value="Yes">Yes</ion-radio>
+            <ion-radio ng-model="manglik" name="manglik" value="No">No</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">In favor of Magazine Matching :</label>
+          <ion-list>
+            <ion-radio ng-model="Patrika_milan" name="Patrika_milan" value="Yes">Yes</ion-radio>
+            <ion-radio ng-model="Patrika_milan" name="Patrika_milan" value="No">No</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Other" name="other" ng-model="other">
+          </label>
+          <label class="item item-input item-input-custom"> Religious Affiliation :</label>
+          <ion-list>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="Temple">Temple</ion-radio>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="Placer">Placer</ion-radio>
+            <ion-radio ng-model="Dharmik_manyata" name="Dharmik_manyata" value="Terapanth">Terapanth</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder=" Brother Married (Write Digit)" name="bhai_vivahit" ng-model="bhai_vivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Brother Unmarried (Write Digit)" name="bhai_avivahit" ng-model="bhai_avivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Sister Married (Write Digit)" name="bahan_vivahit" ng-model="bahan_vivahit">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Sister Unmarried (Write Digit)" name="bahan_avivahit" ng-model="bahan_avivahit">
+          </label>
+          <label class="item item-input item-input-custom">Residence (*)</label>
+          <ion-list>
+            <ion-radio ng-model="residentsinc" name="residentsinc" value="Self">Self</ion-radio>
+            <ion-radio ng-model="residentsinc" name="residentsinc" value="Rent">Rent</ion-radio>
+       	  </ion-list>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Vehicle Two wheeler (Write Digit)" name="vahan_2wheeler" ng-model="vahan_2wheeler">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Vehicle Four wheeler (Write Digit) " name="vahan_4wheeler" ng-model="vahan_4wheeler">
+          </label>
+          <label class="item item-input item-input-custom" style="font-size:10.5px;">Candidate will be the presence in conference Yes/No (*)</label>
+          <ion-list>
+            <ion-radio ng-model="upstithiti" name="upstithiti" value="Yes">Yes</ion-radio>
+            <ion-radio ng-model="upstithiti" name="upstithiti" value="No">No</ion-radio>
+       	  </ion-list>
+          <h5 style="width:80%">Other Contact (*)</h5>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Name (*)" name="Other_contact" ng-model="Other_contact">
+          </label>
+          <label class="item item-input item-input-custom">
+            <textarea placeholder="Address (*)" rows="4" name="other_adderess" ng-model="other_adderess"></textarea>
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="tel" placeholder="Mobile No. (*)" name="other_Mobile_number" ng-model="other_Mobile_number">
+          </label>
+          <label class="item item-input item-input-custom">
+            <input type="text" placeholder="Relation With Candidate (*)" name="Pratyashi_relationship" ng-model="Pratyashi_relationship">
+          </label>
+          <h5 style="width:80%">Passport Size Color Photo Of Candidate</h5>
+          <input type="file" ng-model="photo" valid-file >
+          <p class="primary" style="width:80%">All the information given by me are absolutely true.The entire responsibility on me.</p>
+          <a style="cursor:pointer;" ng-click="openModal();">Terms & Conditions</a>
+          <button class="button button-positive button-block" >
+              Submit
+          </button>
+		</form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100" style="margin-bottom:80px;">
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

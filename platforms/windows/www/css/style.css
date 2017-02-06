@@ -1,0 +1,50 @@
+/* Empty. Add your own CSS if you like */
+@charset "utf-8";
+/* CSS Document */
+/* body background color */
+.backcolor{background-color:#F8F8F8}
+/* ancher config */
+a{text-decoration: none; display:block; width:100%; color:#000;}
+.button.button-icon.button-clear.ion-navicon{
+	color:#FFF;
+}
+
+/** New For JainOswal**/
+.title.title-center.header-item { font-size: 12px; }
+.slider { height: auto; }
+map { display: block;width: 100%;height: 100%; }
+.scroll { height: 100%; }
+.text-center { text-align: center; }
+.icon-box-high { border: 1px solid #ddd;box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);padding: 10px; }
+.item-input-custom { margin-top:10px; }
+.slider-slide img { height:200px;width:100%; }
+.pagesubheader { margin-top: 43px; }
+.slider-slides { height:200px;width:100%;}
+.banner_text { position: absolute;top: 221px;left: 20px;width: 50%;color: #000;font-size:20px; }
+.banner_text > h3{ color: #00008b; }
+.profileimg { position: absolute;top: 135px;left: 0px;right: 0px;margin:auto;width: 25%;height: 80px;border: 3px solid #800000;border-radius:10%; }
+.creative_idea_text { position:relative; bottom:160px; left:25%; width:50%; color:#000; font-size:20px; }
+.creative_idea_text > h3{ color: #fff;margin-bottom:0px; }
+.creative_idea_text > h5{ color: #fff;margin-top:0px; }
+.item.memberavatar { margin-bottom:5px; }
+.item.memberavatar > img { border: 1px solid #800000; } 
+.datatitle { float: left; }
+.datavalue  { float: right; }
+/** New Class **/
+.bar.bar-primary { background-color: #800000;background-image: linear-gradient(0deg, #830303, #830303 50%, transparent 50%);border-color: #800000; color: #fff; }
+.bar.bar-primary .button , .bar.bar-primary h1 , .bar.bar-primary h2 , .bar.bar-primary h3 { color: #fff !important;  }
+.primary { color: #800000 !important; }
+.bar.bar-secondary { background-color: #f2ef9b;background-image: linear-gradient(0deg, #830303, #830303 50%, transparent 50%);border-color: #f2ef9b; color: #fff; }
+.bar.bar-secondary .button , .bar.bar-secondary h1 , .bar.bar-secondary h2 , .bar.bar-secondary h3 { color: #800000 !important;  }
+.secondary { color: #f2ef9b; }
+/** End New Class **/
+
+.item-custom {
+    padding-left: 55px;
+}
+.icon.ion-ios-information.my  , .icon.ion-android-calendar.my{
+    font-size: 30px;
+    left: 15px;
+    position: absolute;
+    top: 10px;
+}
